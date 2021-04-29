@@ -22,10 +22,11 @@
       rel="stylesheet"
     />
     
-  </head>  
+  </head>
   <body id="page-profile">
-    
+
     <%- include('parts/page-header', { title: 'Meu Perfil'}) %>
+
 
     <div class="container animate-up delay-2">
       <aside class="card">
@@ -54,7 +55,7 @@
                   type="text" 
                   id="name" 
                   name="name" 
-                  value="<%= profile.name %>"/>
+                  value="<%= profile.name %>" />
               </div>
 
               <div class="input-wrapper">
@@ -63,8 +64,8 @@
                 placeholder="https://"
                 type="url" 
                 id="avatar" 
-                name="avatar" 
-                value="<%= profile.avatar %>"/>
+                name="avatar"
+                value="<%= profile.avatar %>" />
               </div>
             </div>
           </fieldset>
@@ -91,8 +92,8 @@
                 <input 
                   type="number"
                   id="hours-per-day" 
-                  name="hours-per-day" 
-                  value="<%= profile["hours-per-day"] %>"/>
+                  name="hours-per-day"
+                  value="<%= profile["hours-per-day"] %>" />
               </div>
             </div>
 
@@ -103,8 +104,8 @@
                 <input
                   type="number"
                   id="days-per-week" 
-                  name="days-per-week" 
-                  value="<%= profile["days-per-week"] %>"/>
+                  name="days-per-week"
+                  value="<%= profile["days-per-week"] %>" />
               </div>
 
               <div class="input-wrapper">
@@ -113,8 +114,8 @@
                 <input 
                   type="number" 
                   id="vacation-per-year" 
-                  name="vacation-per-year" 
-                  value="<%= profile["vacation-per-year"] %>"/>
+                  name="vacation-per-year"
+                  value="<%= profile["vacation-per-year"] %>" />
               </div>
             </div>
           </fieldset>

@@ -32,16 +32,15 @@
           <img id="logo" src="/images/logo.svg" alt="Logo" />
           <span id="notification">
             <img src="/images/alert-octagon.svg" alt="Alerta" />
-
             <% if(freeHours <= 0){ %>
               Você não tem horas livres
-            <% }else{%> 
+            <% }else{ %>
               Você tem <%= freeHours %> horas livres no seu dia
-            <% } %>              
+            <% } %>
           </span>
           <a href="/profile" id="avatar-profile">
-            <p><%= profile.name %>  <span>Ver perfil</span></p>
-            <img src="<%= profile.avatar %> "/>
+            <p><%= profile.name %> <span>Ver perfil</span></p>
+            <img src="<%= profile.avatar %>" />
           </a>
         </section>
 
@@ -52,15 +51,15 @@
 
           <div class="info">
             <div class="total">
-              <strong><%= statusCount.total %> </strong>
+              <strong><%= statusCount.total %></strong>
               Projetos ao total
             </div>
             <div class="in-progress">
-              <strong><%= statusCount.progress %> </strong>
+              <strong><%= statusCount.progress %></strong>
               Em andamento
             </div>
             <div class="finished">
-              <strong><%= statusCount.done %> </strong>
+              <strong><%= statusCount.done %></strong>
               Encerrados
             </div>
           </div>
@@ -80,24 +79,22 @@
 
         <div class="cards">
 
-          <% jobs.forEach((job) => { %> <!-- Função para pegar cada item de um array no arquivo route.js -->
 
-            <div class="card <%= job.status %> " data-id="<%= job.id %> ">
+          <% jobs.forEach((job) => { %>
+
+            <div class="card <%= job.status %> " data-id="<%= job.id %>">
               <div class="id column"><%= job.id %> </div>
               <div class="name column">
                 <%= job.name %> 
               </div>
               <div class="deadline column">
-                <span>Prazo</span>                
+                <span>Prazo</span>
                 <p>
                   <% if(job.status === 'progress') { %>
-                    <%= job.remaining %> dias para a entrega
-                  
-                  <% } else { %> 
-                    Prazo encerrado      
+                    <%= job.remaining %>  dias para a entrega
+                  <% } else { %>
+                    Prazo encerrado
                   <% } %> 
-                  
-
                 </p>
               </div>
               <div class="amount column">
@@ -110,7 +107,7 @@
               <div class="actions column flex">
                 <p class="sr-only">Ações</p>
                 <a 
-                  href="/job/ <%= job.id %> " 
+                  href="/job/<%= job.id %> " 
                   class="button white edit" 
                   title="Editar Job">
                   <img src="/images/edit-24.svg" alt="Editar Job" />
@@ -120,11 +117,11 @@
                 </button>
               </div>
             </div>
+            <!-- end card -->
 
           <% }) %> 
 
-          
-          <!-- end card -->
+         
 
         </div>
         <!-- end cards -->
